@@ -98,6 +98,8 @@ docker load < ubuntu_14.04.tar
 ```
 docker tag ubuntu:latest username/ubuntu:latest
 docker push username/ubuntu:latest
-
 ```
+
+##### 练习
+
 
