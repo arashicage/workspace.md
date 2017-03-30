@@ -49,7 +49,8 @@ docker run -it -v /dbdata --name dbdata2 ubuntu
 
 docker run -it --volumes-from dbdata1 --name db1 postgres
 docker run -it --volumes-from dbdata1 --name db2 postgres
-docker run -it --volumes-from db1 --name db3 postgres      docker run -it --volumes-from dbdata1 --name --volumes-from dbdata2 db4 postgres
+docker run -it --volumes-from db1 --name db3 postgres      
+docker run -it --volumes-from dbdata1 --name --volumes-from dbdata2 db4 postgres
 
 # 数据卷容器
 # 多对多，传递性
