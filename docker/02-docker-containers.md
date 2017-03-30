@@ -35,8 +35,9 @@ docker start containerID or containerName
 ```
 docker run -it ubuntu /bin/echo 'hello docker'     # 执行完 这条命令 容器就终止了
 docker run -it ubuntu /bin/bash                    # 执行用户操作，最后 exit，ctrl+d 的时候容器就终止了
-docker run -d ubuntu /bin/sh -c 'while true;do echo hello docker;sleep 1;done'     # -d 以守护态运行，取决于命令，-d 不能和 --rm 同时使用
+docker run -d ubuntu /bin/sh -c 'while true;do echo hello docker;sleep 1;done'     
 
+# -d 以守护态运行，取决于命令，-d 不能和 --rm 同时使用
 # docker run 等同于 docker create 然后 docker start
 ```
 
