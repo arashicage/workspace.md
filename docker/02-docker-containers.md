@@ -114,8 +114,8 @@ cat ubuntu_export.tar | docker import - u01/ubuntu:v1.1
 docker import ubuntu_export.tar - u01/ubuntu:v1.1
 
 # 导入之后变成镜像，docker image 查看
-# 镜像的 存出 save   和 存入 load
-# 容器的 导出 export 和 导入 import
+# 镜像的 存出 save   和 存入 load    保留完整记录，较大
+# 容器的 导出 export 和 导入 import  丢弃历史和元数据，较小
 ```
 
 ##### 容器命名
