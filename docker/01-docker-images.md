@@ -43,6 +43,12 @@ docker inspect ubuntu
 docker inspect --format "{{ .ID }}" ubuntu
 ```
 
+##### 检视历史
+
+```
+docker history ubuntu
+```
+
 ##### 删除镜像
 
 ```
@@ -53,7 +59,8 @@ docker rmi busybox ubuntu
 docker rmi 00f017a8c2a6 cf725f136fd2
 
 # 当一个image 存在多个 tag 时，如果按 tag 删除镜像，只会删除指定的 tag，不会删除 image 本身
-# 当还有基于该 image 的容器正在运行时，该镜像无法删除，docker rmi -f 
+# 当还有基于该 image 的容器时，该镜像无法删除，docker rmi -f(不推荐)
+# 合适的做法是先删除该由该 image 创建出来的容器，然后再删除镜像
 ```
 
 ##### TAG
