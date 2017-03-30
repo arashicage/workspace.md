@@ -78,13 +78,15 @@ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 
 ```
 1. 从容器
-2. 从模板
+2. 从模板 OpenVZ
 3. 从 dockerfile 构建
 
 docker run -it ubuntu /bin/bash
 ... do some modification ...
 docker commit -m "nginx installed" -a "arashicage" containerID u01:tag
 docker images 
+
+cat ubuntu-14.04-x86_64-minimal.tar.gz | docker import - ubuntu:14:04
 ```
 
 ##### 导出镜像
