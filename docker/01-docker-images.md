@@ -98,7 +98,7 @@ docker save -o ubuntu_14.04.tar ubuntu:14.04
 ##### 导入镜像
 
 ```
-docker load --input ubuntu_14.04.tar
+docker load --input ubuntu_14.04.tar xx:tag
 docker load < ubuntu_14.04.tar
 ```
 
